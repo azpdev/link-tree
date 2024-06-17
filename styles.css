@@ -1,0 +1,99 @@
+.basics h1,
+.basics h3,
+.basics h4 {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.basics h4 {
+  font-style: italic;
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: var(--background-image);
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.links,
+.basics {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0 1rem;
+  max-width: 475px;
+  width: 100%;
+}
+
+.links h2,
+.links ul li,
+.links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.links h2 {
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li,
+.links ul li a {
+  display: block;
+}
+
+.links ul li a {
+  align-self: center;
+  border: 3px solid var(--color-text);
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.links ul li a span {
+  padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.links ul li a img {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  filter: var(--invert);
+}
+
+.links ul li a:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 32px auto;
+  padding: 0 1rem;
+  max-width: 475px;
+}
+
+#profile-picture {
+  border: 5px solid var(--color-text);
+  border-radius: 10%;
+  height: 200px;
+  width: 200px;
+}

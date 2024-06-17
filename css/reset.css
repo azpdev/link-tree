@@ -1,0 +1,65 @@
+@import url(theme.css);
+
+/* Starter Global Styles */
+
+* {
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: "MesloLGS NF", monospace, "Roboto", sans-serif;
+  font-size: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+p {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 200%;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 160%;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 135%;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 110%;
+  font-weight: 500;
+}
+
+/* Label */
+h5 {
+  font-size: 90%;
+  font-weight: 400;
+}
+
+ul {
+  font-size: 100%;
+  padding-left: 18px;
+}
+
+li {
+  font-size: 100%;
+}
+
+/* End Starter Global Styles */
