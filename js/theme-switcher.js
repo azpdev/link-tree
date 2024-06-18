@@ -13,6 +13,10 @@ function calculateSettingAsThemeString({
 
 function setCurrentTheme(theme) {
   document.querySelector("html").setAttribute("data-theme", theme);
+  document.getElementById("switch").checked = theme === "dark";
+
+  localStorage.setItem("theme", theme);
+  currentThemeSetting = theme;
 }
 
 window.addEventListener("load", () => {
@@ -26,16 +30,13 @@ window.addEventListener("load", () => {
 
   setCurrentTheme(currentThemeSetting);
 
-  const button = document.querySelector("[data-theme-toggle]");
+  const button = document.getElementById("switch");
 
   button.addEventListener("click", () => {
+    currentThemeSetting = document
+      .querySelector("html")
+      .getAttribute("data-theme");
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-    const newCta =
-      newTheme === "dark" ? "Change to light theme" : "Change to dark theme";
-    button.innerText = newCta;
-    button.setAttribute("aria-label", newCta);
-    document.querySelector("html").setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    currentThemeSetting = newTheme;
+    setCurrentTheme(newTheme);
   });
 });
