@@ -11,6 +11,16 @@ function calculateSettingAsThemeString({
   return "light";
 }
 
+function initThemeSwitcher() {
+  const localStorageTheme = localStorage.getItem("theme");
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+  let currentThemeSetting = calculateSettingAsThemeString({
+    localStorageTheme,
+    systemSettingDark,
+  });
+  setCurrentTheme(currentThemeSetting);
+}
+
 function setCurrentTheme(theme) {
   document.querySelector("html").setAttribute("data-theme", theme);
   document.getElementById("switch").checked = theme === "dark";
@@ -20,17 +30,9 @@ function setCurrentTheme(theme) {
 }
 
 window.addEventListener("load", () => {
-  const localStorageTheme = localStorage.getItem("theme");
-  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-  let currentThemeSetting = calculateSettingAsThemeString({
-    localStorageTheme,
-    systemSettingDark,
-  });
-
-  setCurrentTheme(currentThemeSetting);
-
   const button = document.getElementById("switch");
+
+  initThemeSwitcher();
 
   button.addEventListener("click", () => {
     currentThemeSetting = document
