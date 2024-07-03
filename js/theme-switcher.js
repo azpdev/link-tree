@@ -26,7 +26,6 @@ function setCurrentTheme(theme) {
   document.getElementById("switch").checked = theme === "dark";
 
   localStorage.setItem("theme", theme);
-  currentThemeSetting = theme;
 }
 
 window.addEventListener("load", () => {
@@ -35,7 +34,7 @@ window.addEventListener("load", () => {
   initThemeSwitcher();
 
   button.addEventListener("click", () => {
-    currentThemeSetting = document
+    let currentThemeSetting = document
       .querySelector("html")
       .getAttribute("data-theme");
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
