@@ -11,7 +11,7 @@
   --color-background: #d6d2db;
   --color-dark: #343a40;
   --color-light: #f8f9fa;
-  --color-primary: #4c766c;
+  --color-primary: #1d515c;
   --color-text: #212529;
   --invert: invert(0);
 }
@@ -21,7 +21,7 @@
   --color-background: #282829;
   --color-dark: #f8f9fa;
   --color-light: #343a40;
-  --color-primary: #1d515c;
+  --color-primary: #4c766c;
   --color-text: #e7e5e5;
   --invert: invert(1);
 }
