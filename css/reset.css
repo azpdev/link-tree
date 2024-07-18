@@ -64,3 +64,11 @@ li {
 }
 
 /* End Starter Global Styles */
+
+/* General Styles */
+
+.buy-me-coffee {
+  text-decoration: underline;
+}
+
+/* End of General Styles */
