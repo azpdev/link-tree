@@ -18,10 +18,12 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v4
+        with: 
+          version: 9
 
       - name: Build project
-        run: npm run build
+        run: pnpm run build
 
       - name: Add CNAME
         run: cp CNAME ./dist/CNAME
