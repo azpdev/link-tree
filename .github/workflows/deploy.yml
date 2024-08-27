@@ -17,10 +17,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
+      - name: Setup PNPM
         uses: pnpm/action-setup@v4
         with: 
           version: 9
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build project
         run: pnpm run build
