@@ -51,7 +51,7 @@ header {
   flex-direction: column;
   justify-content: start;
   margin: 0 1rem;
-  max-width: 475px;
+  max-width: var(--default-max-width);
   width: 100%;
 }
 
@@ -112,21 +112,21 @@ main {
   justify-content: center;
   margin: 32px auto;
   padding: 0 1rem;
-  max-width: 475px;
+  max-width: var(--default-max-width);
 }
 
 #profile-picture {
   border: 5px solid var(--color-primary);
   border-radius: 10%;
-  height: 200px;
-  width: 200px;
+  height: 14em;
+  width: 14em;
 }
 
 .site-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 475px;
+  max-width: var(--default-max-width);
   padding: 0 16px;
   width: 100%;
 }
@@ -140,7 +140,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  max-width: 475px;
+  max-width: var(--default-max-width);
   padding: 0 16px;
   width: 100%;
 }
