@@ -1,0 +1,74 @@
+@import url(theme.css);
+
+/* Starter Global Styles */
+
+* {
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: "MesloLGS NF", monospace, "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Label */
+h5 {
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+ul {
+  font-size: 1rem;
+  padding-left: 18px;
+}
+
+li {
+  font-size: 1rem;
+}
+
+/* End Starter Global Styles */
+
+/* General Styles */
+
+.buy-me-coffee {
+  text-decoration: underline;
+}
+
+/* End of General Styles */
