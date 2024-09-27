@@ -53,8 +53,8 @@ main {
 .social-contact li a img {
   filter: var(--invert);
   padding: 4px;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 50px;
+  width: 50px;
 }
 
 .links,
