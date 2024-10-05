@@ -22,7 +22,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 32px;
+  margin: 16px;
 }
 
 main {
@@ -30,14 +30,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 32px auto;
+  margin: 16px auto;
   padding: 0 1rem;
   max-width: var(--default-max-width);
 }
 
 #profile-picture {
   border: 5px solid var(--color-primary);
-  border-radius: 10%;
+  border-radius: var(--default-border-radius);
   height: 14em;
   width: 14em;
 }
@@ -140,7 +140,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 32px 0;
 }
 
 .copy-right {

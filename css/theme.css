@@ -3,7 +3,9 @@
   --color-info: #17a2b8;
   --color-warning: #ffc107;
   --color-danger: #dc3545;
-  --default-max-width: 30em;
+
+  --default-max-width: 1000px;
+  --default-border-radius: 16px;
 }
 
 [data-theme="light"] {
