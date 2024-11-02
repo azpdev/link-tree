@@ -1,10 +1,9 @@
-function calculateSettingAsThemeString({
-  localStorageTheme,
-  systemSettingDark,
-}) {
+function calculateSettingAsThemeString(localStorageTheme) {
   if (localStorageTheme !== null) {
     return localStorageTheme;
   }
+
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
   if (systemSettingDark.matches) {
     return "dark";
   }
@@ -13,31 +12,34 @@ function calculateSettingAsThemeString({
 
 function initThemeSwitcher() {
   const localStorageTheme = localStorage.getItem("theme");
-  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-  let currentThemeSetting = calculateSettingAsThemeString({
-    localStorageTheme,
-    systemSettingDark,
-  });
-  setCurrentTheme(currentThemeSetting);
+  setCurrentTheme(
+    calculateSettingAsThemeString(localStorageTheme),
+    localStorageTheme !== null
+  );
 }
 
-function setCurrentTheme(theme) {
-  document.querySelector("html").setAttribute("data-theme", theme);
+function setCurrentTheme(theme, setTheme) {
   document.getElementById("switch").checked = theme === "dark";
 
-  localStorage.setItem("theme", theme);
+  if (setTheme) {
+    document.querySelector("html").setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }
 }
+
+initThemeSwitcher();
 
 window.addEventListener("load", () => {
   const button = document.getElementById("switch");
 
-  initThemeSwitcher();
-
   button.addEventListener("click", () => {
-    let currentThemeSetting = document
+    const localStorageTheme = document
       .querySelector("html")
       .getAttribute("data-theme");
-    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-    setCurrentTheme(newTheme);
+    const newTheme =
+      calculateSettingAsThemeString(localStorageTheme) === "dark"
+        ? "light"
+        : "dark";
+    setCurrentTheme(newTheme, true);
   });
 });
