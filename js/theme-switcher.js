@@ -27,9 +27,9 @@ function setCurrentTheme(theme, setTheme) {
   }
 }
 
-initThemeSwitcher();
+window.addEventListener("DOMContentLoaded", () => {
+  initThemeSwitcher();
 
-window.addEventListener("load", () => {
   const button = document.getElementById("switch");
 
   button.addEventListener("click", () => {
