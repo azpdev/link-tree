@@ -27,9 +27,8 @@ function setCurrentTheme(theme, setTheme) {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+function themeToggleSetup() {
   initThemeSwitcher();
-
   const button = document.getElementById("switch");
 
   button.addEventListener("click", () => {
@@ -42,4 +41,12 @@ window.addEventListener("DOMContentLoaded", () => {
         : "dark";
     setCurrentTheme(newTheme, true);
   });
-});
+}
+
+if (document.readyState === "loading") {
+  window.addEventListener("DOMContentLoaded", () => {
+    themeToggleSetup();
+  });
+} else {
+  themeToggleSetup();
+}
