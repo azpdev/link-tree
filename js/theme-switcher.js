@@ -12,10 +12,7 @@ function calculateSettingAsThemeString(localStorageTheme) {
 
 function initThemeSwitcher() {
   const localStorageTheme = localStorage.getItem("theme");
-  setCurrentTheme(
-    calculateSettingAsThemeString(localStorageTheme),
-    localStorageTheme !== null
-  );
+  setCurrentTheme(calculateSettingAsThemeString(localStorageTheme), localStorageTheme !== null);
 }
 
 function setCurrentTheme(theme, setTheme) {
@@ -32,13 +29,8 @@ function themeToggleSetup() {
   const button = document.getElementById("switch");
 
   button.addEventListener("click", () => {
-    const localStorageTheme = document
-      .querySelector("html")
-      .getAttribute("data-theme");
-    const newTheme =
-      calculateSettingAsThemeString(localStorageTheme) === "dark"
-        ? "light"
-        : "dark";
+    const localStorageTheme = document.querySelector("html").getAttribute("data-theme");
+    const newTheme = calculateSettingAsThemeString(localStorageTheme) === "dark" ? "light" : "dark";
     setCurrentTheme(newTheme, true);
   });
 }

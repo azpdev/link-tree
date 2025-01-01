@@ -1,5 +1,6 @@
-import { resolve } from "path";
 import { defineConfig } from "vite";
+import { resolve } from "path";
+
 import htmlMinifier from "vite-plugin-html-minifier";
 
 export default defineConfig({

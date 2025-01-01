@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ecmel.vscode-html-css",
+    "xabikos.javascriptsnippets",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.js-debug-nightly",
+    "rvest.vs-code-prettier-eslint"
+  ]
+}
