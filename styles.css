@@ -9,6 +9,14 @@
   font-style: italic;
 }
 
+.titles {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  max-width: var(--default-max-width);
+  width: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
