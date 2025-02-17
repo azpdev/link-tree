@@ -101,7 +101,7 @@ main {
   border: 3px solid var(--color-primary);
   border-radius: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin: 8px 0;
   padding: 8px;
 }
@@ -110,12 +110,16 @@ main {
   padding-top: 2px;
   text-align: center;
   vertical-align: middle;
+  align-self: center;
 }
 
 .links ul li a img {
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 8px;
+}
+
+.links ul li a img.logo-icon {
   filter: var(--invert);
 }
 
