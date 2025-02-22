@@ -1,7 +1,7 @@
 export default [
   {
     files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
-    ignores: ["**/node_modules/**", "**/dist/**"],
+    ignores: ["**/node_modules/**", "**/dist/**", ".pnpm-lock.yaml"],
     rules: {
       "prefer-const": "error",
       "no-constant-binary-expression": "error",
@@ -17,6 +17,7 @@ export default [
       "no-empty-function": "error",
       "no-magic-numbers": "error",
       "no-unused-expressions": "error",
+      "no-console": "error",
     },
   },
 ];
