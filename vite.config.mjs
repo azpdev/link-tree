@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 import htmlMinifier from "vite-plugin-html-minifier";
+import inlineSource from "vite-plugin-inline-source";
 
 export default defineConfig({
   appType: "mpa",
@@ -14,6 +15,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    inlineSource({
+      optimizeCss: true,
+    }),
     htmlMinifier({
       minify: true,
     }),

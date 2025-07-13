@@ -11,8 +11,23 @@
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://www.uncon.net/MesloLGSNF-web-fonts/stylesheet.css" />
+    <!-- Font Preloading for faster loading -->
+    <link
+      rel="preload"
+      href="/assets/fonts/MesloLGSNF-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+
+    <!-- Immediate theme detection - BEFORE CSS loads -->
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const system = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        const theme = saved || system;
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
 
     <!-- Site Meta -->
     <title>Alex Z. Palomin - Software Developer</title>
@@ -22,9 +37,11 @@
     <meta name="author" content="Alex Z. Palomin" />
 
     <!-- Scripts and Styles -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="/css/globals.css" />
-    <script type="module" src="/js/theme-switcher.js"></script>
+    <style inline-source src="/css/fonts.css"></style>
+    <style inline-source src="/css/theme.css"></style>
+    <style inline-source src="styles.css"></style>
+    <style inline-source src="/css/globals.css"></style>
+    <script type="module" src="/js/theme-toggle.js"></script>
   </head>
   <body>
     <header>

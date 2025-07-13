@@ -1,0 +1,58 @@
+/* MesloLGS NF Font - Self-hosted for better performance */
+
+/* 
+  To use this file, download MesloLGS NF font files from:
+  https://github.com/ryanoasis/nerd-fonts/releases
+  
+  Look for "Meslo.zip" in the assets of the latest release.
+  
+  Extract and copy these files to /assets/fonts/:
+  - MesloLGSNF-Regular.woff2
+  - MesloLGSNF-Bold.woff2
+  - MesloLGSNF-Italic.woff2
+  - MesloLGSNF-BoldItalic.woff2
+*/
+
+/* Regular */
+@font-face {
+  font-family: "MesloLGS NF";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/assets/fonts/MesloLGSNF-Regular.woff2") format("woff2"),
+    url("/assets/fonts/MesloLGSNF-Regular.woff") format("woff");
+}
+
+/* Bold */
+@font-face {
+  font-family: "MesloLGS NF";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/assets/fonts/MesloLGSNF-Bold.woff2") format("woff2"),
+    url("/assets/fonts/MesloLGSNF-Bold.woff") format("woff");
+}
+
+/* Italic */
+@font-face {
+  font-family: "MesloLGS NF";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/assets/fonts/MesloLGSNF-Italic.woff2") format("woff2"),
+    url("/assets/fonts/MesloLGSNF-Italic.woff") format("woff");
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "MesloLGS NF";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/assets/fonts/MesloLGSNF-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/MesloLGSNF-BoldItalic.woff") format("woff");
+}

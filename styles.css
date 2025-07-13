@@ -119,6 +119,10 @@ main {
   margin-right: 8px;
 }
 
+.links ul li a img[src*="portfolio-logo"] {
+  border-radius: 50%;
+}
+
 .links ul li a img.logo-icon {
   filter: var(--invert);
 }
